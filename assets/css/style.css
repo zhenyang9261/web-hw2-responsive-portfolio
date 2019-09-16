@@ -9,6 +9,7 @@ body {
     padding: 0;
     width:100%;
     height: 100%;
+    position: relative;
 }
 
 /* ------------- Header ----------- */
@@ -18,6 +19,8 @@ header {
     width: 100% !important;
     border-bottom: 1px solid #cccccc;
     margin: 0;
+    position: fixed;
+    top: 0;
 }
 
 .header-content {
@@ -59,10 +62,10 @@ header {
     clear: both;
     background-color: #ffffff;
     width: 75%;
-    margin: 1rem 3rem;
+    margin: 6rem 3rem 5.5rem 3rem; /* main content in between sticky header and footer */
     overflow: auto;
     border: 1px solid #cccccc;
-    margin-bottom: 5.5rem; /* end above the sticky footer */
+
 }
 
 /* ------------- Section and Section Header ----------- */
@@ -170,4 +173,55 @@ input {
     background-color: #ffffff;
     color: #4aaaa5;
     font-weight: bold;
+}
+
+/* ------------ Screen size 768px - 980px ---------------- */
+@media screen and (max-width: 768px) {
+
+    .main-content {
+        width: 95%;
+        margin: 6rem auto 5.5rem auto;
+    }
+}
+
+/* ------------ Screen size 640px - 767px ---------------- */
+@media screen and (max-width: 640px) {
+
+    header {
+        position: static; /* header not sticky in small screens */
+    }
+
+    .header-content {
+        margin: 0;
+    }
+
+    .name {
+        display: block;
+        width: 100%;
+        text-align: center;
+        float: none;
+        padding: 1.5rem 0;
+    }
+    
+    .nav-area {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav {
+        display: block;
+        clear: both;
+        padding: 1rem 0 0 0;
+    }
+    
+    .nav li {
+        margin: 0 0.5rem;
+        text-align: center;
+    }
+
+    .main-content {
+        width: 95%;
+        margin: 1rem auto 5.5rem auto;
+    }
+
 }
