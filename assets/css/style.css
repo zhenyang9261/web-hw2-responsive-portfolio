@@ -21,6 +21,7 @@ header {
     margin: 0;
     position: fixed;
     top: 0;
+    z-index: 2;
 }
 
 .header-content {
@@ -131,7 +132,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem auto;
     margin: 2rem auto;
 }
 
@@ -195,26 +195,29 @@ input {
 @media screen and (max-width: 768px) {
 
     .name {
-        /* smaller size and padding in smaller screen */
+        /* smaller size and padding */
         font-size: 1.5rem; 
         padding: 1.2rem 2rem;
     }
 
     .sepbar {
-        /* Do not show separate bars in smaller screen */
+        /* Do not show separate bars to save space */
         display: none;
     }
 
     .main-content {
+        /* Content occupies more space */
         width: 95%;
         margin: 6rem auto 5.5rem auto;
     }
 
     .img-container {
+        /* Images occupies more space. This will make the space between images smaller */
         width: 45%;
     }
     
     .img-caption {
+        /* Smaller caption */
         height: 2rem;
         padding-top: 1rem;
     } 
@@ -224,11 +227,13 @@ input {
 @media screen and (max-width: 640px) {
 
     header {
-        position: static; /* header not sticky in small screens */
+        /* header not sticky in small screens */
+        position: static; 
         text-align: center;
     }
 
     .header-content {
+        /* Occupies all space available */
         margin: 0;
     }
 
@@ -240,6 +245,7 @@ input {
     }
     
     .nav {
+        /* Separate line for navbar */
         clear: both;
         padding: 0.5rem 0;
         float: none;
@@ -249,16 +255,18 @@ input {
     }
     
     .nav li {
+        /* Navbar items closer */
         margin: 0 0.2rem;
         text-align: center;
     }
 
     .main-content {
-        width: 95%;
+        /* Header not sticky, need to adjust margin top */
         margin: 1rem auto 5.5rem auto;
     }
 
     .me-img {
+        /* Image in separate line */
         display: block;
         width: 100%;
         height: auto;
@@ -266,18 +274,16 @@ input {
     }
     
     .img-row {
-        display: inline-block;
+        /* One image a row */
+        display: inline;
     }
 
     .img-container {
+        /* One image a row */
         display: block;
         clear: both;
-        width: 90%;
+        width: 95%;
+        margin-bottom: 2rem;
     }
-    
-    .img-caption {
-        height: 2rem;
-        padding-top: 1rem;
-    } 
 
 }
