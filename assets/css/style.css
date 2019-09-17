@@ -43,14 +43,21 @@ header {
     padding: 1.3rem 0 0 0;
     float: right;
 }
+
+.sepbar {
+    color:#efefef;
+}
+
 .nav li {
     float:left;
     margin: 0 0.8rem;
 }
+
 .nav li a {
     color:#777777;
     text-decoration:none
 }
+
 .nav a:hover {
     color:#4aaaa5;
     font-weight: bold;
@@ -121,29 +128,37 @@ footer {
 
 /* ---------- portfolio.html specific rules -------------- */
 .img-row {
-    display: block;
-    padding: 0.8rem 2.5rem;
-    margin: 1.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem auto;
+    margin: 2rem auto;
 }
 
 .img-container {
     display: inline-block;
+    width: 40%;
     position: relative;
-    margin: 0 2.5rem;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
 }
 
 .img-caption {
     position: absolute;
     left: 0;
+    right: 0;
     bottom: 1rem;
     width: 100%;
-    height: 2rem;
+    height: 3rem;
     font-size: 1rem;
     text-align: center;
     color: #ffffff;
     background-color: #4aaaa5;
-    padding-top: 0.8rem;
-}
+    padding-top: 1.5rem;
+} 
 
 /* --------------- contact.html specific rules --------------*/
 input {
@@ -179,10 +194,30 @@ input {
 /* ------------ Screen size up to 768px ---------------- */
 @media screen and (max-width: 768px) {
 
+    .name {
+        /* smaller size and padding in smaller screen */
+        font-size: 1.5rem; 
+        padding: 1.2rem 2rem;
+    }
+
+    .sepbar {
+        /* Do not show separate bars in smaller screen */
+        display: none;
+    }
+
     .main-content {
         width: 95%;
         margin: 6rem auto 5.5rem auto;
     }
+
+    .img-container {
+        width: 45%;
+    }
+    
+    .img-caption {
+        height: 2rem;
+        padding-top: 1rem;
+    } 
 }
 
 /* ------------ Screen size up to 640px ---------------- */
@@ -204,20 +239,17 @@ input {
         padding: 1.5rem 0;
     }
     
-    .nav-area {
-        width: 100%;
-        text-align: center;
-    }
-
     .nav {
-        display: block;
         clear: both;
         padding: 0.5rem 0;
         float: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .nav li {
-        margin: 0 0.5rem;
+        margin: 0 0.2rem;
         text-align: center;
     }
 
@@ -233,5 +265,19 @@ input {
         padding: 1em;
     }
     
+    .img-row {
+        display: inline-block;
+    }
+
+    .img-container {
+        display: block;
+        clear: both;
+        width: 90%;
+    }
+    
+    .img-caption {
+        height: 2rem;
+        padding-top: 1rem;
+    } 
 
 }
