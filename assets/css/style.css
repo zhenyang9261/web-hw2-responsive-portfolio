@@ -161,7 +161,8 @@ input {
 .input-submit {
     background-color: #4aaaa5;
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
     width: 100px;
     height: 3rem;
     padding: auto 2rem;
@@ -175,7 +176,7 @@ input {
     font-weight: bold;
 }
 
-/* ------------ Screen size 768px - 980px ---------------- */
+/* ------------ Screen size up to 768px ---------------- */
 @media screen and (max-width: 768px) {
 
     .main-content {
@@ -184,11 +185,12 @@ input {
     }
 }
 
-/* ------------ Screen size 640px - 767px ---------------- */
+/* ------------ Screen size up to 640px ---------------- */
 @media screen and (max-width: 640px) {
 
     header {
         position: static; /* header not sticky in small screens */
+        text-align: center;
     }
 
     .header-content {
@@ -198,7 +200,6 @@ input {
     .name {
         display: block;
         width: 100%;
-        text-align: center;
         float: none;
         padding: 1.5rem 0;
     }
@@ -207,11 +208,12 @@ input {
         width: 100%;
         text-align: center;
     }
-    
+
     .nav {
         display: block;
         clear: both;
-        padding: 1rem 0 0 0;
+        padding: 0.5rem 0;
+        float: none;
     }
     
     .nav li {
@@ -223,5 +225,13 @@ input {
         width: 95%;
         margin: 1rem auto 5.5rem auto;
     }
+
+    .me-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 1em;
+    }
+    
 
 }
